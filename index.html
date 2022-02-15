@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/icon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <title>Instagram</title>
+</head>
+<body>
+    <div class="container"><!--início container-->
+        <div class="phones"><!--início phones-->
+            <img src="img/phones.png" alt="phones" title="phones" class="imgphones">
+        </div><!--fim phones-->
+
+        <div class="login"><!--início login-->
+            <button id="dark" class="dark-mode"></button>
+            <span class="instaLogo"></span>
+            <form action="" class="campos">
+                <input type="text" class="nome" placeholder="Telefone, nome de usuário ou email">
+                <input type="password" class="senha" placeholder="Senha"><br>
+                <a href="#" type="button" class="btn">Entrar</a>
+            </form>
+
+            <span class="divisor">
+                ------------------------- 
+                    <label class="ou">OU</label> 
+                -------------------------
+            </span>
+
+            <div class="details"><!--início details-->
+                <a href="#" class="fb">
+                    <img src="img/facebookLogo.png" alt="Facebook Logo" title="Facebook Logo"> Entrar com o Facebook
+                </a><br>
+                <a href="#" class="pwd"> Esqueceu a senha?</a>
+            </div><!-- fim details -->
+
+            <div class="conta">
+                <label for="">Não tem uma conta?
+                    <a href="#" class="cad">Cadastre-se</a>
+                </label>
+            </div>
+
+            <div class="apps"><!--início apps-->
+                <div class="message">
+                    <span>Obtenha o aplicativo.</span>
+                </div>                   
+                    <a href="#" class="apple">
+                        <img src="img/apple.png" alt="App Store" title="App Store">
+                    </a>
+                    <a href="#" class="droid">
+                        <img src="img/android.png" alt="Play Store" title="Play Store">
+                    </a>
+            </div><!--fim apps-->
+        </div><!--fim login-->
+    </div><!--fim container-->
+
+    <div class="rodape"><!--início rodape-->
+        <footer class="links1"><!--início links1-->
+            <a href="#">Meta</a>
+            <a href="#">Sobre</a>
+            <a href="#">Blog</a>
+            <a href="#">Carreiras</a>
+            <a href="#">Ajuda</a>
+            <a href="#">API</a>
+            <a href="#">Privacidade</a>
+            <a href="#">Termos</a>
+            <a href="#">Principais Contas</a>
+            <a href="#">Hashtags</a>
+            <a href="#">Localizações</a>
+            <a href="#">Instagram Lite</a>
+        </footer><!--fim links1-->
+        <footer class="links2"><!--início links2-->
+            <a href="#">Beleza</a>
+            <a href="#">Dança</a>
+            <a href="#">Fitness</a>
+            <a href="#">Comida e bebida</a>
+            <a href="#">Casa e jardim</a>
+            <a href="#">Música</a>
+            <a href="#">Artes visuais</a>
+        </footer><!--fim links2-->
+        <footer class="info"><!--início info-->
+            <span class="info">Português (Brasil)</span>
+                <span id="ano" class="info"></span>
+        </footer><!--fim info-->
+    </div><!--fim rodape-->
+
+    <script>
+        let ano = new Date();
+        let infano = ano.getFullYear();
+        document.getElementById("ano").innerHTML = `&copy ${infano} Instagram from Meta`;
+
+        const page = document.querySelector("html")
+        const moon = document.getElementById("dark")
+
+        moon.addEventListener("click", function mudar(){
+            page.classList.toggle("dark")
+        })
+    </script>
+        
+</body>
+</html>
